@@ -1,0 +1,45 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login-form {
+  margin: 8rem auto;
+  input:not([type='submit']) {
+    margin: 1rem;
+    background: #656464;
+    color:#fefefe;
+    &::-webkit-input-placeholder {
+      color:#fefefe;
+    }
+  }
+  .btn {
+    margin: 0 1rem;
+    background: #6bb2c6;
+    color:#fefefe;
+  }
+}
+.card {
+  background:#606060;
+}
+.angled_container {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.angled_container:before,
+.angled_container:after {
+  content: "";
+  width: 100%; height: 100%;
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+}
+.angled_container:before {
+  background-color: #606060;
+  transform: skewY(150deg);
+  transform-origin: top left;
+}
+.angled_container:after {
+  background-color: #6bb2c6;
+  transform: skewY(200deg);
+  transform-origin: top right;
+}

@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag    'sessions', media: 'all' %>
+<div class="container">
+<div class="col-sm-8 login-form">
+<div class="angled_container">Sign In Form</div>
+  <h1><%= debug(session[:error]) %></h1>
+
+<%= form_for(:session, url: login_path,:html => {:class => 'form card'}) do |f| %>
+  <div class="form-group">
+  <%= f.email_field :email, :placeholder => "Email",:class => "form-control col-sm-11" %>
+  </div>
+<div class="form-group">
+  <%= f.password_field :password, :placeholder => "Password",:class => "form-control col-sm-11" %>
+</div>
+<div class="form-group">
+  <%= f.submit "Log in", class: "btn" %>
+</div>
+<% end %>
+</div>
+</div>
