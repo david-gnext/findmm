@@ -1,3 +1,20 @@
+<%= stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
+<nav class="navbar navbar-expand-sm bg-main navbar-dark">
+  <ul class="navbar-nav col-lg-12">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item nav-right-item">
+      <%= link_to "Log out",logout_path,method:"DELETE",class:'nav-link btn btn-main text-white' %>
+    </li>
+  </ul>
+</nav>
+<div class="jumbotron">
 <h3>Hellow This is Dashboard</h3>
-
-<%= link_to "Log out",logout_path,method:"DELETE" %>
+</div>

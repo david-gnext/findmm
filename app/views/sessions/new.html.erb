@@ -2,7 +2,9 @@
 <div class="container">
 <div class="col-sm-8 login-form">
 <div class="angled_container">Sign In Form</div>
-  <h1><%= debug(session[:error]) %></h1>
+  <% if session[:error] %>
+  <div class="alert alert-danger"><%= session[:error] %></div>
+  <% end %>
 
 <%= form_for(:session, url: login_path,:html => {:class => 'form card'}) do |f| %>
   <div class="form-group">
